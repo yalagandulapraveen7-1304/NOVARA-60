@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-panel: var(--panel);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+  --color-success: var(--success);
+  --color-notice: var(--notice);
+  --color-solar: var(--solar);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --font-display: var(--font-display);
+  --font-mono: var(--font-mono);
+  --font-sans: var(--font-sans);
+}
+
+/* Reference Mission-Control Palette: Pale ice-blue background, crisp white panels, dark navy typography, cyan/teal data accents, and green/amber/violet/red status indicators */
+:root {
+  --radius: 0.5rem;
+  --background: #ebf5fb;
+  --foreground: #0b2138;
+  --card: #ffffff;
+  --card-foreground: #0b2138;
+  --popover: #ffffff;
+  --popover-foreground: #0b2138;
+  --panel: #ffffff;
+  --primary: #009bb8;
+  --primary-foreground: #ffffff;
+  --secondary: #f0f7fc;
+  --secondary-foreground: #0b2138;
+  --muted: #e2eff8;
+  --muted-foreground: #4e6e87;
+  --accent: #e0f2fe;
+  --accent-foreground: #0b2138;
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+  --warning: #d97706;
+  --warning-foreground: #ffffff;
+  --success: #059669;
+  --notice: #2563eb;
+  --solar: #d97706;
+  --violet: #6366f1;
+  --border: #d2e4f2;
+  --input: #d2e4f2;
+  --font-display: "Plus Jakarta Sans", "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-sans: "Plus Jakarta Sans", "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: "Plus Jakarta Sans", "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #c3d9e9;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #edf5fa;
+  }
+}
+
+/* 3D asset labels */
+.asset-tag {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  color: #0b2138;
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid #d2e4f2;
+  padding: 2px 7px;
+  border-radius: 4px;
+  pointer-events: none;
+  white-space: nowrap;
+  box-shadow: 0 2px 6px rgba(11, 33, 56, 0.1);
+  font-weight: 500;
+}
+.asset-tag-active {
+  color: #009bb8;
+  border-color: #009bb8;
+  background: #f0faff;
+  font-weight: 600;
+}
+.asset-tag-fault {
+  color: #dc2626;
+  border-color: #dc2626;
+  background: #fef2f2;
+  font-weight: 600;
+}
+
+/* Hide scrollbar utility for clean responsive horizontal navigation */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
