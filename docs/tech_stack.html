@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NOVARA | Antarctic Digital Twin — Technology Stack</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-orange: #e65c00;
+      --header-orange: #ea580c;
+      --border-color: #ea580c;
+      --cell-border: #f38b47;
+      --bg-light: #ffffff;
+      --text-dark: #1e293b;
+      --text-muted: #475569;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: #f8fafc;
+      color: var(--text-dark);
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1100px;
+      background: #ffffff;
+      padding: 32px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
+    }
+
+    .header-title {
+      margin-bottom: 24px;
+      text-align: center;
+    }
+
+    .header-title h1 {
+      font-size: 26px;
+      font-weight: 800;
+      color: #0f172a;
+      letter-spacing: -0.02em;
+    }
+
+    .header-title p {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    .table-wrapper {
+      width: 100%;
+      overflow-x: auto;
+      border-radius: 10px;
+      border: 2px solid var(--border-color);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 13.5px;
+      background: #ffffff;
+    }
+
+    thead th {
+      background-color: var(--header-orange);
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 15px;
+      padding: 14px 18px;
+      text-transform: capitalize;
+      letter-spacing: 0.01em;
+      border: 1px solid var(--border-color);
+    }
+
+    thead th:first-child {
+      width: 24%;
+      text-align: center;
+    }
+
+    thead th:nth-child(2) {
+      width: 32%;
+    }
+
+    thead th:nth-child(3) {
+      width: 44%;
+    }
+
+    tbody td {
+      padding: 12px 18px;
+      vertical-align: middle;
+      border: 1px solid #fed7aa;
+      line-height: 1.5;
+    }
+
+    /* Category Column */
+    .category-cell {
+      font-weight: 700;
+      font-size: 14px;
+      color: #0f172a;
+      text-align: center;
+      background-color: #ffffff;
+      border-right: 2px solid var(--border-color);
+      border-bottom: 2px solid var(--border-color);
+      padding: 18px 14px;
+    }
+
+    /* Technology Column */
+    .tech-cell {
+      font-weight: 600;
+      color: #0f172a;
+    }
+
+    /* Description Column */
+    .desc-cell {
+      color: var(--text-muted);
+    }
+
+    /* Category section dividers */
+    .category-end td {
+      border-bottom: 2px solid var(--border-color);
+    }
+
+    tbody tr:hover {
+      background-color: #fffaf5;
+    }
+
+    .footer-note {
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 12px;
+      color: #64748b;
+      padding-top: 12px;
+      border-top: 1px solid #e2e8f0;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #fff7ed;
+      color: #c2410c;
+      border: 1px solid #ffedd5;
+      padding: 4px 10px;
+      border-radius: 9999px;
+      font-weight: 600;
+      font-size: 11px;
+    }
+
+    .dot {
+      width: 6px;
+      height: 6px;
+      background-color: #ea580c;
+      border-radius: 50%;
+    }
+
+    @media print {
+      body {
+        background: white;
+        padding: 0;
+      }
+      .container {
+        box-shadow: none;
+        padding: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="header-title">
+      <h1>NOVARA | ANTARCTIC DIGITAL TWIN</h1>
+      <p>India’s Antarctic Research Stations (Maitri & Bharati) — Complete Technology Stack</p>
+    </div>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>Technology</th>
+            <th>How it is used</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- 1. Data Collection & Storage -->
+          <tr>
+            <td rowspan="5" class="category-cell">Data Collection &amp; Storage</td>
+            <td class="tech-cell">Python 3.11</td>
+            <td class="desc-cell">Core execution language for the digital twin backend, microgrid dispatch models, and API orchestration.</td>
+          </tr>
+          <tr>
+            <td class="tech-cell">Pandas + NumPy</td>
+            <td class="desc-cell">Cleans, transforms, and processes real-time synoptic polar climate data, power curves, and high-frequency sensor readings.</td>
+          </tr>
+          <tr>
+            <td class="tech-cell">MQTT / WebSocket Streams</td>
+            <td class="desc-cell">Streams sensor, generator, solar, and katabatic wind generation data in real time with low latency.</td>
+          </tr>
+          <tr>
+            <td class="tech-cell">Pydantic v2</td>
+            <td class="desc-cell">Enforces strict data schemas, fault injection validation, and parameter constraints for all incoming telemetry.</td>
+          </tr>
+          <tr class="category-end">
+            <td class="tech-cell">PostgreSQL / SQLite (WAL)</td>
+            <td class="desc-cell">Stores time-series telemetry, meteorological forecasts, alert history, and optimization dispatch schedules.</td>
+          </tr>
+
+          <!-- 2. Predictive Intelligence & Diagnostics -->
+          <tr>
+            <td rowspan="4" class="category-cell">Predictive Intelligence &amp; Diagnostics</td>
+            <td class="tech-cell">LightGBM</td>
+            <td class="desc-cell">Forecasts station electrical load, renewable output under cloud cover, and equipment failure risk.</td>
+          </tr>
+          <tr>
+            <td class="tech-cell">Scikit-learn (Isolation Forest)</td>
+            <td class="desc-cell">Flags abnormal sensor drift, alternator stator overtemperature, and unusual microgrid voltage deviations.</td>
+          </tr>
+          <tr>
+            <td class="tech-cell">Survival Analysis (RUL)</td>
+            <td class="desc-cell">Predicts Remaining Useful Life and maintenance windows for primary diesel generators and BESS battery banks.</td>
+          </tr>
+          <tr class="category-end">
+            <td class="tech-cell">Groq LLM Advisory Copilot</td>
+            <td class="desc-cell">Generates actionable operational guidance, fuel conservation advice, and incident response playbooks for station crews.</td>
+          </tr>
+
+          <!-- 3. Simulation & Optimization Engine -->
+          <tr>
+            <td rowspan="3" class="category-cell">Simulation &amp; Optimization Engine</td>
+            <td class="tech-cell">SciPy + Deterministic Physics</td>
+            <td class="desc-cell">Powers the Digital Twin simulation under polar conditions (building heat loss at −41°C, katabatic wind cut-out, BESS cold derating).</td>
+          </tr>
+          <tr>
+            <td class="tech-cell">Google OR-Tools / PuLP</td>
+            <td class="desc-cell">Solves the Mixed-Integer Linear Program (MILP) to identify the most fuel-efficient dispatch schedule while guaranteeing N+1 redundancy.</td>
+          </tr>
+          <tr class="category-end">
+            <td class="tech-cell">CasADi / MPC Control</td>
+            <td class="desc-cell">Runs Model Predictive Control to dynamically modulate battery charge/discharge and diesel compensation in real time.</td>
+          </tr>
+
+          <!-- 4. 3D Digital Twin & Visualization -->
+          <tr>
+            <td rowspan="4" class="category-cell">3D Digital Twin &amp; Visualization</td>
+            <td class="tech-cell">Three.js (@react-three/fiber)</td>
+            <td class="desc-cell">Renders the interactive 3D digital twin of Maitri and Bharati stations, dynamic katabatic blizzards, and building interiors.</td>
+          </tr>
+          <tr>
+            <td class="tech-cell">React 19 + TypeScript</td>
+            <td class="desc-cell">Powers the station mission-control dashboard with strict type safety, modular panels, and responsive desktop/tablet layouts.</td>
+          </tr>
+          <tr>
+            <td class="tech-cell">Recharts + Tailwind CSS</td>
+            <td class="desc-cell">Displays real-time energy flow equations, generation vs load trends, battery state-of-charge, and thermal balance curves.</td>
+          </tr>
+          <tr class="category-end">
+            <td class="tech-cell">TanStack Router &amp; Start</td>
+            <td class="desc-cell">Delivers high-performance client routing, code-splitting, and fast bundle hydration across viewports.</td>
+          </tr>
+
+          <!-- 5. System Integration & Deployment -->
+          <tr>
+            <td rowspan="5" class="category-cell">System Integration &amp; Deployment</td>
+            <td class="tech-cell">FastAPI</td>
+            <td class="desc-cell">Integrates AI models, Digital Twin physics, and dashboard controls into a high-throughput, documented OpenAPI REST service.</td>
+          </tr>
+          <tr>
+            <td class="tech-cell">Production CORS Engine</td>
+            <td class="desc-cell">Secures cross-origin requests between the Vercel edge frontend and Render backend with dynamic origin regex matching.</td>
+          </tr>
+          <tr>
+            <td class="tech-cell">Vercel</td>
+            <td class="desc-cell">Hosts and serves the 3D Digital Twin frontend globally with sub-second asset delivery via the Build Output API.</td>
+          </tr>
+          <tr>
+            <td class="tech-cell">Render</td>
+            <td class="desc-cell">Runs the persistent Python FastAPI backend, mathematical simulation loop, and automated health checks.</td>
+          </tr>
+          <tr class="category-end">
+            <td class="tech-cell">Docker</td>
+            <td class="desc-cell">Packages dependencies and models into a lightweight container for consistent, repeatable deployment.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="footer-note">
+      <div>Ministry of Earth Sciences (MoES) &bull; National Centre for Polar and Ocean Research (NCPOR)</div>
+      <div class="badge">
+        <span class="dot"></span>
+        NOVARA Simulation Architecture
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

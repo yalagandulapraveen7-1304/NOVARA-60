@@ -1,10 +1,10 @@
-<!-- LOVABLE:BEGIN -->
-> [!IMPORTANT]
-> This project is connected to [Lovable](https://lovable.dev). Avoid rewriting
-> published git history — force pushing, or rebasing/amending/squashing commits
-> that are already pushed — as it rewrites history on Lovable's side and the
-> user will likely lose their project history.
->
-> Commits you push to the connected branch sync back to Lovable and show up in
-> the editor, so keep the branch in a working state.
-<!-- LOVABLE:END -->
+# Development Guidelines for NOVARA
+
+## Project Overview
+This repository contains the frontend web application for NOVARA, the Antarctic Digital Twin operations platform for India's Antarctic research stations (Maitri & Bharati).
+
+## Key Guidelines
+- **Simulation Fidelity**: Ensure all displayed metrics and simulated scenarios are accurately marked as `SIMULATION DATA`.
+- **Component Hierarchy**: The primary views are 3D Station Twin, Real-Time Telemetry Grid, Environmental Sensors, Life Support, Energy Management, and Scenario Simulation Analytics.
+- **Type Safety**: Strictly maintain TypeScript interfaces for station data, assets, and telemetry.
+- **Performance**: Maintain 60fps in the WebGL/Three.js viewport through optimized geometry instancing, texture reuse, and throttled state updates.
